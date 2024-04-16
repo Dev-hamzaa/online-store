@@ -1,13 +1,13 @@
 import express ,{Request,Response,NextFunction} from "express";
+import { getVandorProfile, updateVandorProfile, updateVandorService, vandorLogin } from "../Controller";
 
 
 const router=express.Router()
 
-router.get('/',(req:Request,res:Response,next:NextFunction)=>{
-
-
-res.json({message:"heelo from Vandor ali"})
-})
+router.post('/login',vandorLogin)
+router.get('/profile',getVandorProfile)
+router.patch('/profile',updateVandorProfile)
+router.patch('/service',updateVandorService)
 
 
 export {router as VandorRoute}

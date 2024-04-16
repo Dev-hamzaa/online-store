@@ -8,3 +8,17 @@ export interface CreateVandorInput{
     email:string,
     password:string
 }
+
+
+export interface vandorLoginInputs{
+    email:string,
+    password:string
+}
+
+export interface vandorPayload{
+
+    _id:string,
+    email:string,
+    name:string,
+    foodType:[string]
+}
